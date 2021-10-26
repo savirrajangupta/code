@@ -1,16 +1,15 @@
-//most frequent element
-//WA and TLE(for 3rd subtask)
 
-#include<iostream>
+
+#include<bits.stc++.h>
 using namespace std;
 int main(){
 	int n,m,i,j,res,count,prev;
 	cin>>n>>m;
 	int a[n],l[m],r[m],k[m];
-	for(i=0;i<n;i++)
-		cin>>a[i];
-	for(i=0;i<m;i++)
-		cin>>l[i]>>r[i]>>k[i];
+	for(i=0;i<n;i++){
+		cin>>a[i];}
+	for(i=0;i<m;i++){
+		cin>>l[i]>>r[i]>>k[i];}
 	for(i=0;i<m;i++)
 	{
 		res=prev=-1;
@@ -35,7 +34,7 @@ int main(){
 			if(a[j]>=l[i] && a[j]<=r[i])
 			{
 				prev=a[j];
-				count++;
+				count=count+1;
 				if(count>=k[i])
 				{
 					res=a[j];
@@ -43,6 +42,6 @@ int main(){
 				}
 			}
 		}
-		cout<<res<<"\n";
+		cout<<res<<endl;
 	}
 }
